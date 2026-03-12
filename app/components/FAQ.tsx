@@ -39,18 +39,18 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="px-6 md:px-12 py-10 max-w-4xl mx-auto w-full">
-      <h3 className="text-xl md:text-2xl font-bold mb-6">
+    <section className="px-6 md:px-12 py-12 md:py-16 max-w-4xl mx-auto w-full">
+      <h3 className="text-xl md:text-2xl font-bold mb-8">
         Frequently Asked Questions
       </h3>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-3">
         {FAQ_ITEMS.map((item, i) => (
           <div key={i}>
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              className="w-full flex items-center justify-between bg-[#2d2d2d] hover:bg-[#3d3d3d] px-6 py-5 text-left transition-colors"
+              className="w-full flex items-center justify-between bg-[#2d2d2d] hover:bg-[#3d3d3d] px-6 md:px-8 py-5 md:py-6 text-left transition-colors rounded-sm"
             >
-              <span className="text-base md:text-lg font-normal">
+              <span className="text-base md:text-lg font-normal text-white">
                 {item.question}
               </span>
               <svg
@@ -72,8 +72,8 @@ export default function FAQ() {
             <div
               className={`faq-content ${openIndex === i ? "open" : ""}`}
             >
-              <div className="bg-[#2d2d2d] px-6 py-5 mt-[1px]">
-                <p className="text-base text-white/80 leading-relaxed">
+              <div className="bg-[#2d2d2d] px-6 md:px-8 py-5 md:py-6 mt-[1px]">
+                <p className="text-base text-white/90 leading-relaxed">
                   {item.answer}
                 </p>
               </div>

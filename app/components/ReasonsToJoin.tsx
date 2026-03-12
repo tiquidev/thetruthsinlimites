@@ -48,23 +48,23 @@ const REASONS = [
 
 export default function ReasonsToJoin() {
   return (
-    <section className="px-6 md:px-12 py-10">
-      <h3 className="text-xl md:text-2xl font-bold mb-6">
+    <section className="px-6 md:px-12 py-12 md:py-16">
+      <h3 className="text-xl md:text-2xl font-bold mb-8">
         More Reasons to Join
       </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         {REASONS.map((reason, i) => (
           <div
             key={i}
-            className="bg-gradient-to-b from-[#1f1f2e] to-[#141424] rounded-xl p-6 flex flex-col justify-between min-h-[220px] border border-white/5"
+            className="bg-gradient-to-b from-[#1f1f2e] to-[#141424] rounded-xl p-6 md:p-8 flex flex-col justify-between min-h-[280px] border border-white/5"
           >
-            <div>
-              <h4 className="text-lg font-bold mb-2">{reason.title}</h4>
-              <p className="text-sm text-white/60 leading-relaxed">
+            <div className="flex-1 min-h-0">
+              <h4 className="text-lg font-bold mb-3">{reason.title}</h4>
+              <p className="text-sm text-white/70 leading-loose">
                 {reason.description}
               </p>
             </div>
-            <div className="flex justify-end mt-4">{reason.icon}</div>
+            <div className="flex justify-end mt-6 shrink-0">{reason.icon}</div>
           </div>
         ))}
       </div>

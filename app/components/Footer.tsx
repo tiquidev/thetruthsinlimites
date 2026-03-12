@@ -7,9 +7,9 @@ const FOOTER_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="px-6 md:px-12 py-10 max-w-5xl mx-auto w-full">
+    <footer className="px-6 md:px-12 py-12 md:py-16 max-w-5xl mx-auto w-full">
       {/* CTA */}
-      <div className="mb-8">
+      <div className="mb-10">
         <button className="bg-[#E50914] hover:bg-[#f6121d] text-white text-lg font-semibold px-8 py-3 rounded flex items-center gap-2 transition-colors">
           Get Started
           <svg
@@ -29,7 +29,7 @@ export default function Footer() {
       </div>
 
       {/* Contact */}
-      <p className="text-sm text-white/60 mb-6">
+      <p className="text-sm text-white/70 mb-8">
         Questions? Call{" "}
         <a href="tel:800-542-5607" className="underline hover:text-white/80">
           800-542-5607
@@ -37,14 +37,14 @@ export default function Footer() {
       </p>
 
       {/* Links Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4 mb-10">
         {FOOTER_LINKS.flat()
           .filter(Boolean)
           .map((link, i) => (
             <a
               key={i}
               href="#"
-              className="text-sm text-white/50 underline hover:text-white/70 transition-colors"
+              className="text-sm text-white/60 underline hover:text-white/90 transition-colors py-1"
             >
               {link}
             </a>
@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       {/* Language Selector */}
-      <div className="relative inline-block mb-6">
+      <div className="relative inline-block mb-8">
         <select className="appearance-none bg-transparent border border-white/30 text-white text-sm rounded px-3 py-2 pr-8 cursor-pointer">
           <option value="en" className="bg-black">
             English
@@ -67,7 +67,7 @@ export default function Footer() {
       </div>
 
       {/* Country */}
-      <p className="text-sm text-white/40">The Truth Sin Límites</p>
+      <p className="text-sm text-white/50">The Truth Sin Límites</p>
     </footer>
   );
 }

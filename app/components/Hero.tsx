@@ -19,8 +19,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 sm:px-8 max-w-4xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight tracking-tight">
           Unlimited movies, TV shows, and more
         </h2>
         <p className="text-lg md:text-xl text-white/80 mb-6">
